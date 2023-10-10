@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="flexopus",
-    version="0.0.1",
+    version="0.0.2",
     author="Sebi Nemeth",
     author_email="sebezhetetlen98@gmail.com",
     description="Python package to interact with th Flexopus API",

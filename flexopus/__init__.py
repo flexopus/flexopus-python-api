@@ -1,1 +1,1 @@
-from flexopus.api import status
+from flexopus.api import FlexopusApi
