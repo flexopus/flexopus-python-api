@@ -1,24 +1,11 @@
 from setuptools import setup, find_packages
-from subprocess import Popen, PIPE
-
-def get_version_hash():
-    """Talk to git and find out the tag/hash of our latest commit"""
-    try:
-        p = Popen(["git", "describe",
-                   "--tags", "--dirty", "--always"],
-                    stdout=PIPE)
-    except EnvironmentError:
-        print("Couldn't run git to get a version number for setup.py")
-        return
-    ver = p.communicate()[0]
-    return ver.strip()
 
 with open("README.md", "r") as f:
     long_description = f.read()
 
 setup(
     name="flexopus",
-    version=get_version_hash(),
+    version="v0.0.3",
     author="Sebi Nemeth",
     author_email="sebezhetetlen98@gmail.com",
     description="Python package to interact with th Flexopus API",
