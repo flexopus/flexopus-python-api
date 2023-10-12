@@ -22,8 +22,8 @@ class FlexopusApi:
             "Authorization": f"Bearer {self._access_token}",
         }
 
-    async def fetch_location(self, location_id):
-        url = f"{self._base_url}/locations/{location_id}/bookables/occupancy"
+    async def fetch_location(self, location_id, details=False):
+        url = f"{self._base_url}/locations/{location_id}/bookables/occupancy?details={details}"
 
         async with aiohttp.ClientSession() as session:
             async with session.get(url, headers=self._headers) as response:
